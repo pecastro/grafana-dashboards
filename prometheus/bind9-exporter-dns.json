@@ -155,10 +155,12 @@
       "pluginVersion": "8.1.2",
       "targets": [
         {
-          "expr": "max(node_time_seconds{instance=~\"$node:.*\"}) - max(bind_boot_time_seconds{instance=~\"$node:.*\"}) ",
-          "interval": "5m",
-          "intervalFactor": 2,
+          "expr": "${__to:date:seconds} - max(bind_boot_time_seconds{instance=~\"$node:.*\"}) ",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
           "legendFormat": "",
+          "range": false,
           "refId": "A",
           "step": 600,
           "target": ""
@@ -232,10 +234,12 @@
       "pluginVersion": "8.1.2",
       "targets": [
         {
-          "expr": "max(node_time_seconds{instance=~\"$node:.*\"}) - max(bind_config_time_seconds{instance=~\"$node:.*\"})",
-          "interval": "5m",
-          "intervalFactor": 2,
+          "expr": "${__to:date:seconds} - max(bind_config_time_seconds{instance=~\"$node:.*\"})",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
           "legendFormat": "",
+          "range": false,
           "refId": "A",
           "step": 600,
           "target": ""
@@ -2140,5 +2144,5 @@
   "timezone": "browser",
   "title": "Bind9 Exporter DNS",
   "uid": "XTqyUORMz",
-  "version": 14
+  "version": 15
 }
