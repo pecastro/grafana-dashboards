@@ -114,12 +114,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           },
@@ -136,7 +132,6 @@
       "id": 1,
       "interval": null,
       "links": [],
-      "maxDataPoints": 100,
       "options": {
         "colorMode": "none",
         "graphMode": "none",
@@ -144,7 +139,7 @@
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
-            "mean"
+            "lastNotNull"
           ],
           "fields": "",
           "values": false
@@ -155,7 +150,8 @@
       "pluginVersion": "8.1.2",
       "targets": [
         {
-          "expr": "${__to:date:seconds} - max(bind_boot_time_seconds{instance=~\"$node:.*\"}) ",
+          "expr": "${__to:date:seconds} - bind_boot_time_seconds{instance=~\"$node:.*\"}",
+          "format": "time_series",
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
@@ -193,12 +189,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           },
@@ -215,7 +207,6 @@
       "id": 2,
       "interval": null,
       "links": [],
-      "maxDataPoints": 100,
       "options": {
         "colorMode": "none",
         "graphMode": "none",
@@ -223,7 +214,7 @@
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
-            "mean"
+            "lastNotNull"
           ],
           "fields": "",
           "values": false
@@ -234,7 +225,8 @@
       "pluginVersion": "8.1.2",
       "targets": [
         {
-          "expr": "${__to:date:seconds} - max(bind_config_time_seconds{instance=~\"$node:.*\"})",
+          "expr": "${__to:date:seconds} - bind_config_time_seconds{instance=~\"$node:.*\"}",
+          "format": "time_series",
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
@@ -2144,5 +2136,5 @@
   "timezone": "browser",
   "title": "Bind9 Exporter DNS",
   "uid": "XTqyUORMz",
-  "version": 15
+  "version": 16
 }
