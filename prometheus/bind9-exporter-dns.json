@@ -1,4 +1,32 @@
 {
+  "__inputs": [],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "9.5.1"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph (old)",
+      "version": ""
+    },
+    {
+      "type": "datasource",
+      "id": "prometheus",
+      "name": "Prometheus",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "stat",
+      "name": "Stat",
+      "version": ""
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -26,6 +54,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 12309,
   "graphTooltip": 0,
+  "id": null,
   "links": [
     {
       "icon": "external link",
@@ -2051,11 +2080,7 @@
         "type": "datasource"
       },
       {
-        "current": {
-          "selected": false,
-          "text": "dns",
-          "value": "dns"
-        },
+        "current": {},
         "datasource": {
           "type": "prometheus",
           "uid": "$datasource"
@@ -2166,6 +2191,6 @@
   "timezone": "browser",
   "title": "Bind9 Exporter DNS",
   "uid": "bind9-exporter",
-  "version": 16,
+  "version": 17,
   "weekStart": ""
 }
