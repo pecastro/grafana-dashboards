@@ -2040,11 +2040,7 @@
   "templating": {
     "list": [
       {
-        "current": {
-          "text": "",
-          "value": "${DS_PROMETHEUS}",
-          "selected": true
-        },
+        "current": {},
         "hide": 2,
         "includeAll": false,
         "label": "Datasource",
