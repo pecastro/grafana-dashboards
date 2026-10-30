@@ -138,7 +138,7 @@
           },
           "editorMode": "code",
           "expr": "llamacpp:requests_processing",
-          "legendFormat": "Active requests",
+          "legendFormat": "requests",
           "range": true,
           "refId": "A"
         }
@@ -209,7 +209,7 @@
           },
           "editorMode": "code",
           "expr": "llamacpp:requests_deferred",
-          "legendFormat": "Deferred requests",
+          "legendFormat": "requests",
           "range": true,
           "refId": "A"
         }
@@ -237,8 +237,7 @@
                 "value": 0
               }
             ]
-          },
-          "unit": "tokens/sec"
+          }
         },
         "overrides": []
       },
@@ -273,7 +272,7 @@
           },
           "editorMode": "code",
           "expr": "llamacpp:prompt_tokens_seconds * on() (llamacpp:requests_processing > bool 0)",
-          "legendFormat": "Prompt throughput",
+          "legendFormat": "tokens/s",
           "range": true,
           "refId": "A"
         }
@@ -301,8 +300,7 @@
                 "value": 0
               }
             ]
-          },
-          "unit": "tokens/sec"
+          }
         },
         "overrides": []
       },
@@ -337,7 +335,7 @@
           },
           "editorMode": "code",
           "expr": "llamacpp:predicted_tokens_seconds * on() (llamacpp:requests_processing > bool 0)",
-          "legendFormat": "Generation throughput",
+          "legendFormat": "tokens/s",
           "range": true,
           "refId": "A"
         }
@@ -400,7 +398,7 @@
           },
           "editorMode": "code",
           "expr": "llamacpp:n_busy_slots_per_decode * on() (llamacpp:requests_processing > bool 0)",
-          "legendFormat": "Busy slots",
+          "legendFormat": "busy slots",
           "range": true,
           "refId": "A"
         }
@@ -429,7 +427,7 @@
               }
             ]
           },
-          "unit": "tokens"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -464,7 +462,7 @@
           },
           "editorMode": "code",
           "expr": "llamacpp:n_tokens_max * on() (llamacpp:requests_processing > bool 0)",
-          "legendFormat": "Largest context",
+          "legendFormat": "tokens",
           "range": true,
           "refId": "A"
         }
@@ -500,7 +498,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "tokens/sec",
+            "axisLabel": "tokens/s",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -600,7 +598,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "tokens/sec",
+            "axisLabel": "tokens/s",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -1331,7 +1329,7 @@
           "refId": "A"
         }
       ],
-      "title": "Decode Calls/sec",
+      "title": "Decode Calls / sec",
       "type": "timeseries"
     },
     {
@@ -2061,6 +2059,6 @@
   "timezone": "browser",
   "title": "llama.cpp Monitoring",
   "uid": "llamacpp-monitoring",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
