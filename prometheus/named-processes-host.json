@@ -1983,7 +1983,7 @@
           "expr": "topk(10, sum by (groupname, threadname) (rate(namedprocess_namegroup_thread_io_bytes_total{groupname=~\"$processes\", instance=\"$host\"}[$interval])))",
           "format": "time_series",
           "intervalFactor": 2,
-          "legendFormat": "{{groupname}} / {{threadname}} {{iomode}}",
+          "legendFormat": "{{groupname}} / {{threadname}}",
           "refId": "A"
         }
       ],
