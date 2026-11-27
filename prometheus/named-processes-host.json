@@ -50,7 +50,20 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "links": [],
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": false,
+      "title": "Dashboard source",
+      "tooltip": "Dashboard source",
+      "type": "link",
+      "url": "https://github.com/pecastro/grafana-dashboards/blob/main/prometheus/named-processes-host.json"
+    }
+  ],
   "panels": [
     {
       "datasource": {
@@ -807,6 +820,6 @@
   "timezone": "browser",
   "title": "Named processes by host",
   "uid": "named-processes-host",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
